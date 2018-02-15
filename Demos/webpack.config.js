@@ -1,11 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
+var clientpath='client_routing';//ruta del cliente..cambiar para cada ejemplo
 
 module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './client/main.jsx'
+    './'+clientpath+'/main.jsx'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -22,7 +23,7 @@ module.exports = {
     {
       test: /\.jsx$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'client')
+      include: path.join(__dirname, clientpath)
     },
     // CSS
     { 
