@@ -10,4 +10,8 @@ if (module.hot) {
 
 const user = {uid:1,name:"Ricardo",email:"r@e.cat"};
 
-ReactDOM.render(<Component user={user}/>,document.getElementById('root'));
+function doneChange(txt) {
+	console.log("doneChange:",txt);
+}
+
+ReactDOM.render(<Component user={user} doneChange={(txt) => doneChange(txt)}/>,document.getElementById('root'));

@@ -2,6 +2,7 @@
   "name": "learn-react",
   "version": "1.0.0",
   "description": ":) ",
+  "setupTestFrameworkScriptFile": "./src/setupTests.js",
   "scripts": {
     "test": "jest",
     "build": "webpack",

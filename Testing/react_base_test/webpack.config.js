@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './client/main.jsx'
+    './src/main.jsx'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -22,12 +22,12 @@ module.exports = {
     {
       test: /\.(js|jsx)$/,
       loaders: ['babel-loader'],
-      include: path.join(__dirname, 'client')
+      include: path.join(__dirname, 'src')
     },
     // CSS
     { 
       test: /\.styl$/, 
-      include: path.join(__dirname, 'client'),
+      include: path.join(__dirname, 'src'),
       loader: 'style-loader!css-loader!stylus-loader'
     }
     ]
