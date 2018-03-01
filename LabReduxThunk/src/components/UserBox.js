@@ -12,7 +12,7 @@ const UserBox = React.createClass({
   },
 
   componentDidMount: function() {
-    console.log('UserBox',this.props);
+    console.log('UserBox props:',this.props);
   },
 
   render: function() {
